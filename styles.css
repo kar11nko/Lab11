@@ -1,0 +1,277 @@
+#logo {
+position: absolute;
+width: 100px;
+height: 30px;
+left: 42px;
+top: 31px;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+}
+#sign_in_to{
+position: absolute;
+width: 231px;
+height: 75px;
+left: 175px;
+top: 294px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 50px;
+line-height: 75px;
+}
+#text{
+position: absolute;
+width: 396px;
+height: 53px;
+left: 175px;
+top: 374px;}
+#text p{
+font-family: Poppins,sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 52px;
+}
+#subtext{
+
+position: absolute;
+width: 308px;
+height: 24px;
+left: 179px;
+top: 480px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+}
+#subtext2{
+position: absolute;
+width: 308px;
+height: 24px;
+left: 179px;
+top: 510px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+}
+#subtext2 p{
+font-family: Poppins, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+}
+#subtext2 span{
+font-family: Poppins, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+color: blue;	
+}
+#signin{
+position: absolute;
+width: 99px;
+height: 45px;
+left: 892px;
+top: 174px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 45px;
+}
+#Saly-14{
+position: absolute;
+left: 30%;
+right: 0%;
+top: 50%;
+bottom: 0%;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--grey: #F4F2FF;
+	--dark-grey: #B7B7B7;
+
+	--green: #23AE00;
+	--light-green: #BDFFAC;
+
+	--red: #FE2727;
+	--light-red: #FFD2D2;
+
+	--blue: #277FFE;
+	--light-blue: #B6C6FF;
+	--dark-blue: #1368E3;
+
+	--bs: #AECFFF;
+	--text: #9B9B9B;
+}
+
+a {
+	color: var(--blue);
+	transition: all .1s ease;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--dark-blue);
+}
+
+body {
+	background: var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0 16px;
+}
+
+.container {
+	max-width: 400px;
+	width: 100%;
+	position: relative;
+	top: 60px;
+	left: 250px;
+}
+form {
+	width: 100%;
+	padding: 15px;
+	border-radius: 12px;
+	background: #F0EFFF;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) scale(.5);
+	opacity: 0;
+	z-index: 100;
+	transition: all .3s ease;
+	transition-delay: 0s;
+}
+form.active {
+	transform: translateY(-50%);
+	opacity: 1;
+	z-index: 100;
+	transition-delay: .3s;
+}
+.title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.form-group {
+	margin-bottom: 14px;
+}
+.form-group label {
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.input-group {
+	width: 100%;
+	position: relative;
+}
+.input-group input {
+	padding: 12px 40px 12px 20px;
+	outline: none;
+	border-radius: 6px;
+	border: 1px solid var(--dark-grey);
+	width: 100%;
+	transition: all .3s ease;
+}
+
+/* Validation */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+	border-color: var(--blue);
+	background: var(--grey);
+}
+.input-group input:focus + i,
+.input-group input:not(:placeholder-shown) + i {
+	color: var(--blue);
+}
+.input-group input:focus:valid {
+	box-shadow: 0 0 0 4px var(--light-green);
+}
+.input-group input:valid:not(:placeholder-shown) {
+	border-color: var(--green);
+}
+.input-group input:valid:not(:placeholder-shown) + i {
+	color: var(--green);
+}
+.input-group input:invalid:not(:placeholder-shown) {
+	border-color: var(--red);
+}
+.input-group input:invalid:not(:placeholder-shown) + i {
+	color: var(--red);
+}
+.input-group input:focus:invalid {
+	box-shadow: 0 0 0 4px var(--light-red);
+}
+.input-group input:focus,
+.input-group input:focus:placeholder-shown {
+	box-shadow: 0 0 0 4px var(--bs);
+}
+
+/* Validation */
+
+.input-group i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	color: var(--text);
+	pointer-events: none;
+	transition: all .3s ease;
+}
+.form-group .help-text {
+	font-size: 12px;
+	color: var(--text);
+}
+.btn-submit {
+	padding: 12px 0;
+	display: block;
+	width: 100%;
+	color: #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all .3s ease;
+	border: none;
+	font-weight: 500;
+	background: var(--blue);
+	margin-bottom: 20px;
+}
+.btn-submit:hover {
+	background: var(--dark-blue);
+}
+#registerhere{
+position: absolute;
+width: 308px;
+height: 24px;
+left: 50px;
+top: 350px;
+
+font-family: Poppins, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+}

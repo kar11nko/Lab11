@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css"  href="styles.css">
+</head>
+<body>
+<div id="logo">
+	<img src="YourLogo.png">
+</div>
+<div id="sign_in_to">
+	<img src="signinto.png">
+</div>
+<div id="text">
+	<p>Hello! </p>
+</div>
+<div id="subtext">
+	<img src="text.png">
+</div>
+<div id="subtext2">
+<p>You can <span>Register here</span></p>
+</div>
+<div id="signin">
+<img src="signin.png">
+</div>
+<div id="Saly-14">
+	<img src="Saly-14.png">
+</div>
+<div class="container">
+		<form action="#" class="login active">
+			<h2 class="title"></h2>
+			<div class="form-group">
+				<label for="email"></label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Enter email or user-name">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password"></label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+			<!--	<span class="help-text">At least 8 characters</span>-->
+			</div>
+			<button type="submit" class="btn-submit">Login</button>
+			<a href="#">Forgot password?</a>
+			<p id="registerhere">You can <a href="#" onclick="switchForm('register', event)">Register here</a></p>
+		</form>
+
+		<form action="#" class="register">
+			<h2 class="title">Sign up</h2>
+			<div class="form-group">
+				<label for="email"></label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Enter Email ">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password"></label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text"></span>
+			</div>
+			<div class="form-group">
+				<label for="confirm-pass">Confirm password</label>
+				<div class="input-group">
+					<input type="password" id="confirm-pass" placeholder="Enter password again">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">Confirm password must be same with password</span>
+			</div>
+			<button type="submit" class="btn-submit">Register</button>
+			<p>I already have an account. <a href="#" onclick="switchForm('login', event)">Login</a></p>
+		</form>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
